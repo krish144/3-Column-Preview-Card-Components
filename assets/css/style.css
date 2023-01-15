@@ -1,0 +1,144 @@
+
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Color Variable */
+
+:root{
+    --color-brightOrange: hsl(31, 77%, 52%);
+    --color-darkCyan: hsl(184, 100%, 22%);
+    --color-veryDarkCyan: hsl(179, 100%, 13%);
+    --color-transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --color-veryLightGray: hsl(0, 0%, 95%) ;          
+    --color-white:hsl(0,0%,100%);
+}
+
+/* Global Styling */
+
+html{
+    font-size: 62.5%;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: var(--color-veryLightGray);
+   margin: 0%;
+   font-family:'Lexend Deca',sans-serif;
+}
+
+/* Card Group */
+
+.card-group{
+    display: flex;
+    margin: 2rem;
+}
+
+/* Cards */
+
+.card-item{
+  max-width:30rem;
+  padding: 4.8rem 4.6rem;
+}
+
+.card-heading{
+    font-size: 3.6rem;
+    text-transform:uppercase;
+    font-family:'Big Shoulders Display',sans-serif;
+    color:var(--color-white)
+}
+
+.card-paragraph{
+    font-size:1.5rem;
+    color:var(--color-transparentWhite);
+    line-height:26px;
+    margin-bottom: 8rem;
+}
+
+#sedans{
+    background-color: var(--color-brightOrange);
+    border-radius: 9.25px 0px 0px 9.25px;
+}
+
+#svu{
+    background-color: var(--color-darkCyan);
+}
+
+#luxury{
+    background-color: var(--color-veryDarkCyan);
+    border-radius: 0px 9.25px 9.25px 0px;
+}
+
+ /* Card Button */
+
+ .card-btn{
+    font-size: 1.5rem;
+    padding: 1.4rem 3rem;
+    border-radius: 2.5rem;
+    border:none;
+    font-family:'Lexend Deca',sans-serif;
+    text-transform:capitalize;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+}
+
+#sedans-btn{
+    color: var(--color-brightOrange);
+}
+
+#svu-btn{
+    color:var(--color-darkCyan)
+}
+
+#luxury-btn{
+    color:var(--color-veryDarkCyan)
+}
+
+.card-btn:hover{
+    padding: 1.2rem 2.8rem;
+    background-color: transparent;
+    color:var(--color-white)!important;
+    border: 2px double var(--color-white);
+}
+
+
+/* Media Queries */
+
+@media(max-width:760px){
+    body{
+        align-items:baseline;
+    }
+
+    .card-item{
+        padding: 4.2rem 4.5rem;
+    }
+
+    .card-group{
+        flex-direction: column;
+    }
+
+    :is(.card-img,.card-heading,.card-paragraph){
+        margin: 1rem;
+    }
+
+    .card-paragraph{
+        margin-bottom: 2rem;
+    }
+
+    #sedans{
+        border-radius: 9.25px 9.25px 0px 0px;
+    }
+    
+   #luxury{
+        border-radius: 0px 0px 9.25px 9.25px;
+    }
+}
